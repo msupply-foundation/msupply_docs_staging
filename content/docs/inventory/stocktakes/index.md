@@ -83,6 +83,12 @@ The stocktake will then be created, and existing stock lines will be used to pop
 Don't worry if an item is missing from your newly created stocktake. You will have the possibility to add more items to your stocktake afterwards. 
 </div>
 
+#### Vaccines
+
+If you have the [Manage vaccines in doses](/docs/manage/facilities/#store-preferences) store preference enabled you will see a column of `Doses per unit`. For stocktake lines of vaccine items, the number of doses per unit (e.g. `Vial`) is shown in this column. The `Difference` column will also show the difference in doses as well as packs:
+
+![Vaccine line](images/stocktake-vaccine-table.png)
+
 ### Entering counted packs
 
 To start entering stocktake data for an item, click on the stocktake row you would like to edit. A window appears, where you can enter the counted number of packs. You can also update other data from this window, like the expiry date, pricing or location information for a particular batch.
@@ -97,7 +103,7 @@ You can use the `Add batch (+)` button to add more batches of a particular item 
 
 ### Entering reasons
 
-If you have [inventory adjustment options](https://docs.msupply.org.nz/preferences:options?s[]=reasons) configured in your central server, and are not doing an initial stocktake, then you are required to enter a reason when the `counted packs` specified does not match the snapshot packs.
+If you have [inventory adjustment options](https://docs.msupply.org.nz/preferences:options?s[]=reasons) configured in your central server, and are not doing an initial stocktake, then you are required to enter a reason when the `counted packs` specified does not match the snapshot packs. When reducing stock levels for vaccine items, the options configured for `Open vial wastage` and `Closed vial wastage` can be selected here also.
 
 For example, after entering `95` for the counted quantity for Amoxicillin 250mg tabs - batch 166893, a red \* will appear to the right of the `Reason` input, and you will need to select one of the negative inventory adjustment reasons:
 
@@ -150,7 +156,7 @@ If there are no batches with stock for that item, your batch list will be blank.
 When viewing a specific stocktake, simply click the `Print` button which is on the top right of the page.
 When printing, a PDF file is generated for you, which will then open in a new browser tab. This can then be printed using your browser by clicking print or using `control`+`P` (if using windows) or `cmd`+`P` keys on your keyboard (if using a mac).
 
-![Print button](images/print_button.png)
+![Print button](../../images/print_button.png)
 
 This will either:
 
