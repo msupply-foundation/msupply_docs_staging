@@ -107,7 +107,7 @@ In the below example, we are issuing stock to <b>Kamo Regional Warehouse</b>.
 ![gif](images/os_select_customer.gif)
 
 <div class="tip">
-You can tell if a customer is also using Open mSupply in their store if they have an icon like this <img src="images/is_msupplystoreicon.png" alt="Store" style="width:auto"> next to the customer code. 
+You can tell if a customer is also using Open mSupply in their store if they have an icon like this <img src="/docs/replenishment/images/is_msupplystoreicon.png" alt="Store" style="width:auto"> next to the customer code. 
 </div>
 
 2. Once you tap or press `Enter`, or click on a customer, your Outbound Shipment is automatically created
@@ -192,7 +192,7 @@ The tax rate (%) for service charges and the item's sell price can also be edite
 
 If your store is issuing in foreign currencies follow [these instructions](https://docs.msupply.org.nz/other_stuff:currencies) in the central server documentation to set it up. You will also need to enable the store preference `Store: Able to issue in foreign currency`. This preference is compatible with Open mSupply `v1.7.0+`.
 
-![Store preference](../../images/store-pref-issue-in-foreign-currencies.png)
+![Store preference](images/store-pref-issue-in-foreign-currencies.png)
 
 The pen icon will become active once the above instructions have been followed and only if the customer is an external customer. Click on this icon and change to a currency that you would like to issue the shipment in. The currency rate can also be edited if you and the customer have agreed on a different rate.
 ![gif](images/os-change-foreign-currency.gif)
@@ -245,7 +245,7 @@ Located on the bottom left corner, on the left of the status sequence.
 
 Checking the `Hold` checkbox prevents the Outbound Shipment from being updated to the next status.
 
-![Outbound checkbox](../../images/holdcheckbox.png)
+![Outbound checkbox](images/os_holdcheckbox.png)
 
 ### Cancel and Confirm button
 
@@ -293,9 +293,7 @@ In the `Add Item` window, you can look up an item by:
 
 Once your item is highlighted, tap on the name or press `Enter`.
 
-![Add Item list](../../images/adding-an-item-all.png)
-![Add Item by name](../../images/adding-an-item-name.png)
-![Add Item by code](../../images/adding-an-item-code.png)
+![Add item](images/os_additem.gif)
 
 Once the item is selected, you can see the following information:
 
@@ -325,34 +323,32 @@ Default value is `Any` when you are issuing units.
 
 This is a list of batch numbers that you have in store for this item:
 
-| Column                | Description                                                                                                                                                                                                           |
-| :-------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Batch**             | Batch number. It is a designation given to products made in the same manufacturing run.                                                                                                                               |
-| **Expiry**            | Expiry date of the batch (format: MM/YYYY). Note: the date shows in red if the expiry is within the next 3 months.                                                                                                    |
-| **Campaign**          | Shows the name of the campaign which this stock line is associated with, if any. The columns will only be shown if some campaigns are configured. See [Campaigns](/docs/manage/campaigns/) for configuration details. |
-| **Location**          | This is the code of the location where the item is stored if your inventory is managed with storage locations                                                                                                         |
-| **Donor**             | Only shown if the [Global preference](/docs/manage/global-preferences/) for `Allow tracking of stock by donor` is enabled. This shows the name of the donor linked to the stock line if there is one.                 |
-| **Pack Sell Price**   | Selling unit price of the item                                                                                                                                                                                        |
-| **Pack Size**         | Quantity of units per pack                                                                                                                                                                                            |
-| **In Store (packs)**  | Total number of packs in your store                                                                                                                                                                                   |
-| **Available (packs)** | Number of packs available (not already allocated to other shipments)                                                                                                                                                  |
-| **[Pack]s Issued**    | Total number of packs to be issued                                                                                                                                                                                    |
-| **[Unit]s Issued**    | Number of units to be issued                                                                                                                                                                                          |
-| **On Hold**           | Indicates whether a batch is on hold or not. You cannot issue a batch that is on hold.                                                                                                                                |
+| Column                | Description                                                                                                        |
+| :-------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| **Batch**             | Batch number. It is a designation given to products made in the same manufacturing run.                            |
+| **Expiry**            | Expiry date of the batch (format: MM/YYYY). Note: the date shows in red if the expiry is within the next 3 months. |
+| **Location**          | This is the code of the location where the item is stored if your inventory is managed with storage locations      |
+| **Pack Sell Price**   | Selling unit price of the item                                                                                     |
+| **Pack Size**         | Quantity of units per pack                                                                                         |
+| **In Store (packs)**  | Total number of packs in your store                                                                                |
+| **Available (packs)** | Number of packs available (not already allocated to other shipments)                                               |
+| **[Pack] Qty Issued** | Total quantity of packs to be issued                                                                               |
+| **[Unit] Qty Issued** | Number of units to be issued                                                                                       |
+| **On Hold**           | Indicates whether a batch is on hold or not. You cannot issue a batch that is on hold.                             |
 
 There is also a final row in the table which is a placeholder line, if the status of the Outbound Shipment is `NEW`.
 The placeholder line is used when the quantity you are issuing is higher than your available stock.
 
 ![List of available batch numbers](images/os_additem_listofbatches.png)
 
-You can issue Vaccine Items in doses when the [Display vaccines in doses](/docs/manage/facilities/#store-preferences) store preference is turned on. If this is enabled, the following quantity columns will be displayed instead when issuing a vaccine item:
+You can issue Vaccine Items in doses when the `Display vaccines in doses` store preference is turned on in [Manage Facilities](/docs/manage/facilities/#editing-store-preferences). If this is enabled, the following quantity columns will be displayed instead when issuing a vaccine item:
 
-| Column                | Description                                                                                                               |
-| :-------------------- | :------------------------------------------------------------------------------------------------------------------------ |
-| **Doses per [unit]**  | The number of doses per unit                                                                                              |
-| **In Store (doses)**  | Total number of doses which are in stock at your store                                                                    |
-| **Available (doses)** | Total number of doses available for issuing (some may be allocated to other shipments and not yet shipped from the store) |
-| **Doses Issued**      | Total number of doses to be issued                                                                                        |
+| Column                | Description                                 |
+| :-------------------- | :------------------------------------------ |
+| **Doses per unit**    | The number of doses per unit                |
+| **In store (doses)**  | Total number of units at your store         |
+| **Available (doses)** | Total number of doses available for issuing |
+| **Doses Issued**      | Total number of doses to be administered    |
 
 ![List of available batch numbers with doses](images/os_additem_listofbatches_with_doses.png)
 
@@ -471,10 +467,10 @@ Tap on the `Add from master list` button (top right corner).
 A new `Master Lists` window opens. This allows you to select the required master list. Simply click on one of the lists (if you have some available).
 Note that the lists shown are those which are visible to the customer of the shipment.
 
-![Add Item button](../../images/add-item-master-lists.png)
+![Add Item button](images/os-add-item-master-lists.png)
 
 Click `OK` on the prompt:
-![Add Item button](../../images/add-item-master-list-prompt.png)
+![Add Item button](images/os-add-item-master-list-prompt.png)
 
 You will then have unallocated (placeholder) lines added to your shipment, which will then look like this:
 

@@ -52,15 +52,15 @@ The Inbound Shipments list is divided into 7 columns:
 
 2. The list can display a fixed number of shipments per page. On the bottom left corner, you can see how many shipments are currently displayed on your screen.
 
-![Page](../../images/list_showing.png)
+![Page](images/list_showing.png)
 
 3. If you have more shipments than the current limit, you can navigate to the other pages by clicking on the page number or using the right of left arrows (bottom right corner).
 
-![Page](../../images/list_pagenumbers.png)
+![Page](images/list_pagenumbers.png)
 
 4. You can also select a different number of rows to show per page using the option at the bottom right of the page.
 
-![Rows per page](../../images/rows-per-page-select.png)
+![Rows per page](images/rows-per-page-select.png)
 
 ### Filter Inbound Shipments
 
@@ -105,7 +105,7 @@ You can only delete Inbound Shipments with a status <code>NEW</code>.
 1. In the `Suppliers` window, you will be presented with a list of suppliers. You can select your supplier from the list or you can type as much of a supplier name as you want.
 
 <div class="tip">
-You can tell if a supplier is also using Open mSupply in their store. If they do, you will see icon like this <img src="images/is_msupplystoreicon.png" alt="Store" style="width:auto"> next to the supplier code. 
+You can tell if a supplier is also using Open mSupply in their store. If they do, you will see icon like this <img src="/docs/replenishment/images/is_msupplystoreicon.png" alt="Store" style="width:auto"> next to the supplier code. 
 </div>
 
 <div class="imagetitle">
@@ -157,11 +157,10 @@ You can close by tapping on the `X Close` button, on the top right corner of the
 
 ![Open and close the Information Panel](images/is_infopanel_openclose.gif)
 
-#### Additional Info
+#### Additonal Info
 
 In the **Additional Info** section, you can:
 
-- Donor name (if you have [donor tracking](#track-stock-by-donor) enabled)
 - See who created the Inbound Shipment (name of the user)
 - View and edit the Inbound Shipment color. To edit the color, tap on the colored circle and select a color from the pop-up
 - Write or edit a comment
@@ -195,7 +194,7 @@ The tax rate (%) for service charges and the items sell price can also be edited
 
 If your store is issuing in foreign currencies follow [these instructions](https://docs.msupply.org.nz/other_stuff:currencies) in the central server documentation to set it up. You will also need to enable the store preference `Store: Able to issue in foreign currency`. This preference is compatible with Open mSupply `v1.7.0+`.
 
-![Store preference](../../images/store-pref-issue-in-foreign-currencies.png)
+![Store preference](images/store-pref-issue-in-foreign-currencies.png)
 
 The pen icon will become active once the above instructions have been followed and only if the customer is an external customer. Click on this icon and change to a currency that you would like to issue the shipment in. The currency rate can also be edited if you and the customer have agreed on a different rate.
 ![gif](images/is-change-foreign-currency.gif)
@@ -220,12 +219,12 @@ The status sequence is located at the bottom left corner of the Inbound Shipment
 Passed statuses are hightlighted in blue, next statuses appear in grey.
 
 <figure>
-    <img src="images/is_statussequence2.png" alt="Inbound Shipment Status Sequence (New)" style="width:100%">
+    <img src="/docs/replenishment/images/is_statussequence2.png" alt="Inbound Shipment Status Sequence (New)" style="width:100%">
     <figcaption align="center">Status Sequence: current status is <code>New</code>.</figcaption>
 </figure>
 
 <figure>
-    <img src="images/is_statussequence3.png" alt="Inbound Shipment Status Sequence (Shipped)" style="width:100%">
+    <img src="/docs/replenishment/images/is_statussequence3.png" alt="Inbound Shipment Status Sequence (Shipped)" style="width:100%">
     <figcaption align="center">Status Sequence: current status is </i><code>Shipped</code>.</figcaption>
 </figure>
 
@@ -254,7 +253,7 @@ If, however, you've created an Inbound Shipment manually, then the following mes
 and you'll see that the status bar has only the status values which apply to this type of shipment.
 
 <figure align="center">
-    <img src="images/is_statussequence4.png" alt="Inbound Shipment Status Sequence (New & manual)" style="width:60%">
+    <img src="/docs/replenishment/images/is_statussequence4.png" alt="Inbound Shipment Status Sequence (New & manual)" style="width:60%">
     <figcaption align="center">Status Sequence: current status is </i><code>New</code>.</figcaption>
 </figure>
 
@@ -278,7 +277,7 @@ Located on the bottom left corner, on the left of the status sequence.
 
 Check the `Hold` checkbox prevents the Inbound Shipment from being updated to the next status.
 
-![Inbound hold checkbox](../../images/holdcheckbox.png)
+![Inbound hold checkbox](images/os_holdcheckbox.png)
 
 ### Close and Confirm button
 
@@ -321,9 +320,7 @@ In the `Add Item` window, you can look up an item by:
 
 Once your item is highlighted, tap on the name or press `Enter`.
 
-![Add Item list](../../images/adding-an-item-all.png)
-![Add Item by name](../../images/adding-an-item-name.png)
-![Add Item by code](../../images/adding-an-item-code.png)
+![Add Item](images/os_additem.gif)
 
 ### Quantities tab
 
@@ -337,7 +334,7 @@ In the `Quantities` tab, you can update the following fields:
 
 **Additional vaccine columns**
 
-The Quantities tab will have extra columns shown when certain preferences are enabled. These preferences are controlled in [Manage > Stores](/docs/manage/facilities/#editing-store-preferences).
+The Quantities tab will have extra columns available with certain preferences on. These preferences are controlled in [Manage Facilities](/docs/manage/facilities/#editing-store-preferences).
 
 The additional columns available with the `Display vaccine in doses` preference on are:
 
@@ -350,10 +347,10 @@ The additional column available with the `Manage Vvm Status For Stock` preferenc
 
 8. **VVM Status**: The current VVM Status for the batch.
 
-![VVM status column](images/is_vvm_status_column.png)
+![Doses columns](images/is_doses_columns.png)
 
 <div class="note">
-VVM Statuses must also be configured in mSupply by adding a status to the <a href="https://docs.msupply.org.nz/cold_chain_equipment:configure">Vaccine vial monitor list</a>. 
+VVM Statuses must also be configured in mSupply by adding a status to the [Vaccine vial monitor list](https://docs.msupply.org.nz/cold_chain_equipment:configure). 
 </div>
 
 Selecting a VVM Status in an inbound shipment will generate a VVM Status log. One log will be recorded per batch for the inbound shipment (at shipment status Delivered). Logs can be viewed and edited by selecting the item in `View Stock` and selecting the `Status History` tab.
@@ -389,15 +386,9 @@ In the below example, the first line's cost price is $0.01 per unit and the sell
 
 ![Add Item pricing](images/is_additem_pricing.png)
 
-### Other tab
+### Location tab
 
-In the third tab, `Other`, you can select the following:
-
-- **Location**: A storage location to assign the batch number to a location in your storage facility.
-- **Donor**: A donor, if configured to track donors. See [Track stock by donor](#track-stock-by-donor) for details.
-- **Campaign**: If you have a campaign configured (see [Campaigns](/docs/manage/campaigns/)) then this column allows you to associate the stock line with a campaign
-
-#### Location
+In the third tab, `Location`, you can select a storage location to assign the batch number to a location in your storage facility.
 
 Simply select a storage location from the `Location` dropdown menu.
 
@@ -406,8 +397,6 @@ Simply select a storage location from the `Location` dropdown menu.
 <div class="note">
 Don't know the storage location yet? You don't have to capture it right away. You can update the storage location at any time if you haven't confirmed the verification yet. 
 </div>
-
-When editing a line on the shipment, the `Other` tab will have a `Donor` selection if you have the preference enabled:
 
 ### Confirm item and quantities
 
@@ -426,14 +415,14 @@ Tap on the `Add from master list` button (top right corner).
 The button will be disabled if the status of the Inbound Shipment is anything other than <code>New</code>
 </div>
 
-![Add Item button](images/is_add_from_master_list_button.png)
+![Add Item button](images/os-add-from-master-list-button.png)
 
 A new `Master Lists` window opens. This allows you to select the required master list. Simply click on one of the lists (if you have some available).
 
-![Add Item button](../../images/add-item-master-lists.png)
+![Add Item button](images/os-add-item-master-lists.png)
 
 Click `OK` on the prompt:
-![Add Item button](../../images/add-item-master-list-prompt.png)
+![Add Item button](images/os-add-item-master-list-prompt.png)
 
 You will then have placeholder lines added to your shipment, which will then look like this:
 
@@ -577,28 +566,3 @@ If you do not have enough room on your screen, or simply aren't interested in so
 Click on the `Show / hide columns` button which is at the top right of the table. This gives a list of the columns available - you can check the columns you want to see. The options chosen are stored for the current browser, so next time you view an inbound shipment, you will see the selected columns only. If you have chosen which columns to show, then the button is shown in blue to remind you that there are more columns available.
 
 ![Hide columns](images/is_show_hide_columns.gif)
-
-## Track stock by donor
-
-You can track stock by donor throughout the system. A donor can be linked to an inbound shipment and you can also specify the donor for each line on the shipment.
-
-To begin, enable the [Global preference](/docs/manage/global-preferences/) for `Allow tracking of stock by donor`. Then configure some donors in the mSupply central server. This [documentation page](https://docs.msupply.org.nz/receiving_goods:donors?s[]=donor#adding_or_editing_donors) will tell you how.
-
-Once you have enabled the preference and have some donors configured, open the [information panel](#view-or-edit-the-inbound-shipment-information-panel) of your inbound shipment
-
-Here you can view the currently allocated donor and add or change a donor. Click the pencil icon to show the edit window:
-
-![Edit donor](images/edit_donor.png)
-
-When selecting a donor you have the option to specify how this will affect lines on the shipment:
-
-- All lines - the selected donor is linked to every line on the shipment
-- Lines with existing donor - the selected donor replaces the existing donor if one is assigned to a line
-- Lines without a donor - only lines with no donor will be linked to this donor
-- None
-
-When editing a line on the shipment, the `Other` tab will have a `Donor` selection if you have the preference enabled:
-
-![Donor per line](images/edit_line_donor.png)
-
-Simply select the donor for that stock line.

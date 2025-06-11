@@ -51,11 +51,11 @@ La liste des livraisons comprend 7 colonnes:
 
 1. La liste peut afficher **20 livraisons par page**. Dans le coin inférieur gauche, vous pouvez voir combien de livraisons sont actuellement affichées sur votre écran.
 
-![Page](../../images/list_showing.png)
+![Page](images/list_showing.png)
 
 2. S'il y a plus de 20 livraisons, vous pouvez vous déplacer vers une autre page en cliquant sur le numéro de la page ou en utilisant les flèches droite ou gauche (coin inférieur droit).
 
-![Page](../../images/list_pagenumbers.png)
+![Page](images/list_pagenumbers.png)
 
 ### Recherche par nom de Fournisseur
 
@@ -196,12 +196,12 @@ The status sequence is located at the bottom left corner of the Inbound Shipment
 Passed statuses are hightlighted in blue, next statuses appear in grey.
 
 <figure>
-    <img src="images/is_statussequence2.png" alt="Inbound Shipment Status Sequence (New)" style="width:100%">
+    <img src="/docs/replenishment/images/is_statussequence2.png" alt="Inbound Shipment Status Sequence (New)" style="width:100%">
     <figcaption align="center">Status Sequence: current status is <code>New</code>.</figcaption>
 </figure>
 
 <figure>
-    <img src="images/is_statussequence3.png" alt="Inbound Shipment Status Sequence (Shipped)" style="width:100%">
+    <img src="/docs/replenishment/images/is_statussequence3.png" alt="Inbound Shipment Status Sequence (Shipped)" style="width:100%">
     <figcaption align="center">Status Sequence: current status is </i><code>Shipped</code>.</figcaption>
 </figure>
 
@@ -226,7 +226,7 @@ If, however, you've created an Inbound Shipment manually, then the following mes
 and you'll see that the status bar has only the status values which apply to this type of shipment.
 
 <figure align="center">
-    <img src="images/is_statussequence4.png" alt="Inbound Shipment Status Sequence (New & manual)" style="width:60%">
+    <img src="/docs/replenishment/images/is_statussequence4.png" alt="Inbound Shipment Status Sequence (New & manual)" style="width:60%">
     <figcaption align="center">Status Sequence: current status is </i><code>New</code>.</figcaption>
 </figure>
 
@@ -250,7 +250,7 @@ Located on the bottom left corner, on the left of the status sequence.
 
 Check the `Hold` checkbox prevents the Inbound Shipment from being updated to the next status.
 
-![Outbound hold checkbox](../../images/holdcheckbox.png)
+![Outbound hold checkbox](images/os_holdcheckbox.png)
 
 ### Cancel and Confirm button
 
@@ -293,9 +293,7 @@ In the `Add Item` window, you can look up an item by:
 
 Once your item is highlighted, tap on the name or press `Enter`.
 
-![Add Item list](../../images/adding-an-item-all.png)
-![Add Item by name](../../images/adding-an-item-name.png)
-![Add Item by code](../../images/adding-an-item-code.png)
+![Add Item](images/os_additem.gif)
 
 ### Quantities tab
 
@@ -333,15 +331,9 @@ In the below example, sell price $12 per unit and cost price is $10 per unit.
 
 ![Add Item pricing](images/is_additem_pricing.png)
 
-### Other tab
+### Location tab
 
-In the third tab, `Other`, you can select the following:
-
-- **Location**: A storage location to assign the batch number to a location in your storage facility.
-- **Donor**: A donor, if configured to track donors. See [Track stock by donor](#track-stock-by-donor) for details.
-- **Campaign**: If you have a campaign configured (see [Campaigns](/docs/manage/campaigns/)) then this column allows you to associate the stock line with a campaign
-
-#### Location
+In the third tab, `Location`, you can select a storage location to assign the batch number to a location in your storage facility.
 
 Simply select a storage location from the `Location` dropdown menu.
 
@@ -443,28 +435,3 @@ To change the view mode, click the `Group by item` switch.
 When grouped by item, you can expand the item to see individual batches, or use the expand in the table header to expand all grouped rows. If you click on an item you will also see all selected batches, as shown in this example:
 
 ![Group by Item](images/is_group_by_item.gif)
-
-## Track stock by donor
-
-You can track stock by donor throughout the system. A donor can be linked to an inbound shipment and you can also specify the donor for each line on the shipment.
-
-To begin, enable the [Global preference](/docs/manage/global-preferences/) for `Allow tracking of stock by donor`. Then configure some donors in the mSupply central server. This [documentation page](https://docs.msupply.org.nz/receiving_goods:donors?s[]=donor#adding_or_editing_donors) will tell you how.
-
-Once you have enabled the preference and have some donors configured, open the [information panel](#afficher-ou-modifier-le-panneau-d-informations-sur-les-livraisons) of your inbound shipment
-
-Here you can view the currently allocated donor and add or change a donor. Click the pencil icon to show the edit window:
-
-![Edit donor](images/edit_donor.png)
-
-When selecting a donor you have the option to specify how this will affect lines on the shipment:
-
-- All lines - the selected donor is linked to every line on the shipment
-- Lines with existing donor - the selected donor replaces the existing donor if one is assigned to a line
-- Lines without a donor - only lines with no donor will be linked to this donor
-- None
-
-When editing a line on the shipment, the `Other` tab will have a `Donor` selection if you have the preference enabled:
-
-![Donor per line](images/edit_line_donor.png)
-
-Simply select the donor for that stock line.
