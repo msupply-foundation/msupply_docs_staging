@@ -67,6 +67,8 @@ The application requires at least Android 10
 | RAM             | 2 Gb              | 4 Gb              |
 | Storage         | 32 Gb             | 64 Gb             |
 
+<div class="note">If importing Fridge-tags you will require at least Android 12</div>
+
 In order to provide support, the device must also be compatible with MDM (Mobile Device Management) software and support google services. Please contact [mSupply Foundation](https://msupply.foundation/#contact) for details.
 
 Please contact us for testing and/or advice before making a large hardware purchase.
@@ -171,6 +173,7 @@ The table below shows which versions of mSupply and Open mSupply Central you wil
 | 2.7.00+             | 8.01.03+        | 2.7.00+              |
 | 2.8.00+             | 8.02.00+        | 2.7.00+              |
 | 2.9.00+             | 8.03.04+        | 2.7.00+              |
+| 2.9.02+             | 8.03.12+        | 2.9.02+              |
 
 If you attempt to connect to an incompatible server you'll get an error message like this:
 
