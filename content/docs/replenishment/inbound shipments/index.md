@@ -50,6 +50,10 @@ The Inbound Shipments list is divided into 7 columns:
 | **Reference** | This will contain the supplier invoice number if it was created automatically |
 | **Total**     | Total value of the shipment                                                   |
 
+<div class="note">
+Existing statuses will still show if you already have Inbound Shipments in your system before you configure invoice statuses for your store.
+</div>
+
 2. The list can display a fixed number of shipments per page. On the bottom left corner, you can see how many shipments are currently displayed on your screen.
 
 3. If you have more shipments than the current limit, you can navigate to the other pages by clicking on the page number or using the right of left arrows (bottom right corner).
@@ -223,6 +227,10 @@ There are 6 statuses for the Inbound Shipments (although you might see a smaller
 | **Delivered** | When you confirm that the shipment has been delivered.                                                             |   sg    |    ✓     |
 | **Received**  | When you confirm that the shipment has been validated. Goods are now part of your inventory.                       |   cn    |    ✓     |
 | **Verified**  | When you have verified the Inbound Shipment                                                                        |   fn    |          |
+
+<div class="note">
+Statuses will default to the previously available status if you have limited the available statuses in your store preferences. 
+</div>
 
 You probably noticed that two of the status values only apply to automatically created shipments. These are created by the system when another store in the system creates an Outbound Shipment to deliver stock to your store. If this is the case you'll see a message near the top of the page:
 
@@ -632,3 +640,48 @@ When editing a line on the shipment, the `Other` tab will have a `Donor` selecti
 ![Donor per line](images/edit_line_donor.png)
 
 Simply select the donor for that stock line.
+
+## Linking an internal order
+
+If the [store preference](/docs/settings/configuration/#store-preferences) `Can manually link requisition to supplier invoice` is enabled in the current store, then it is possible to link a manually created inbound shipment to an internal order.
+
+This allows you to create a link between the internal order and inbound shipment and also lets you easily add all items which are on the order to this inbound shipment.
+
+### How to link an internal order
+
+Ensure that the store preference mentioned above is enabled.
+
+Click the `New Shipment` button to create a new manual inbound shipment and select a supplier as usual. With the preference enabled you will then see a new screen showing all internal orders which this store has created for the selected supplier.
+
+<div class="note">Only orders in the <i>Sent</i> status are shown in the list</div>
+
+![Select internal order](images/linked_internal_orders.png)
+
+From this window you can
+
+- Click **Cancel** to stop creating the inbound shipment
+- Click **Next** to continue creating without linking an internal order
+- Click on one of the internal order lines in the table - this will link the order to the newly created inbound shipment
+
+### Working with a linked inbound shipment
+
+A link to the internal order is shown in the _Related documents_ section of the _More info_ panel:
+
+![Related documents link](images/linked_related_docs.png)
+
+and a corresponding link is shown on the internal order, allowing you to quickly move between the two.
+
+Once the shipment and order are linked you are able to add lines from the internal order to the shipment.
+Click the arrow beside the **Add Item** button to expand it and view the other options:
+
+![Add from internal order](images/linked_add_from_order.png)
+
+Click the option **Add from Internal Order**.
+
+A windows is shown which lists all of the item lines in the internal order. You can then click the checkboxes to select which lines to add to the shipment.
+
+<div class="tip">You can click the top checkbox to select or deselect all lines</div>
+
+![Add lines from internal order](images/linked_add_lines.png)
+
+Click the **Select** button to add the lines to the shipment.
