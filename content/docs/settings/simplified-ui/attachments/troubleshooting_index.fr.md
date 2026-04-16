@@ -1,6 +1,6 @@
 +++
-title = "Diagnostic et résolution des problèmes"
-description = "Diagnostic et résolution des problèmes liés à une installation Open mSupply"
+title = "Dépannage"
+description = "Dépannage d'une installation Open mSupply"
 date = 2023-11-10T16:20:00+00:00
 updated = 2023-11-10T16:20:00+00:00
 draft = false
@@ -9,7 +9,7 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "Si vous rencontrez des difficultés pour configurer ou utiliser une installation Open mSupply, voici quelques pistes de re."
+lead = "Si vous rencontrez des difficultés pour configurer ou utiliser une installation Open mSupply, voici quelques pistes et correctifs."
 toc = true
 top = false
 +++
