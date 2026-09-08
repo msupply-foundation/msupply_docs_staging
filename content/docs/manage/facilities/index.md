@@ -4,7 +4,7 @@ description = "Manage all stores"
 date = 2022-05-17T16:20:00+00:00
 updated = 2022-05-17T16:20:00+00:00
 draft = false
-weight = 2
+weight = 1
 sort_by = "weight"
 template = "docs/page.html"
 
@@ -72,6 +72,10 @@ Toggle the preferences on or off as required, and close when you are finished.
         <tr>
             <td>Show indicative price on internal orders and requisitions</td>
             <td>When this preference is enabled, an Indicative Price column is displayed on internal orders (in the requesting store) and on the corresponding requisitions (in the supplying store).</td>
+        </tr>
+        <tr>
+            <td>Enable blind stock take</td>
+            <td>Hides the display of the snapshot quantity in stocktakes if enabled</td>
         </tr>
         <tr>
             <td>Order in packs</td>
@@ -144,12 +148,12 @@ Toggle the preferences on or off as required, and close when you are finished.
             <td colspan="2" class="parent">Batches expiring in between days</td>
         </tr>
         <tr>
-            <td class="child">◦ First threshold for expiring items (days)</td>
+            <td class="child">First threshold for expiring items (days)</td>
             <td>Days before expiry to start flagging as "expiring soon." Used in the <code>Expiring Stock</code> widget.
                 Note that the widget isn't displayed if both of these threshold settings are unconfigured.</td>
         </tr>
         <tr>
-            <td class="child">◦ Second threshold for expiring items (days)</td>
+            <td class="child">Second threshold for expiring items (days)</td>
             <td>Days before expiry to stop flagging as "expiring soon." Used in Expiring Stock widget.</td>
         </tr>
         <tr>

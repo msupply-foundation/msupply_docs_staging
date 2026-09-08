@@ -90,6 +90,37 @@ You can only delete Outbound Shipments if they have not been <code>SHIPPED</code
 
 ![Outbound list: delete](images/delete-outbound-shipment.png)
 
+### Copy an Outbound Shipment
+
+If you regularly create similar shipments for the same customer, you can make a copy of an existing shipment instead of building a new one from scratch.
+
+You can do this from two places:
+
+- **From the list:** select a **single** shipment by checking the box on the left, then click `Make a copy` in the `Actions` footer at the bottom of the screen.
+- **From an open shipment:** click `Make a copy` in the information panel on the right.
+
+<div class="note">You can only copy <b>one</b> shipment at a time. If you select more than one in the list, the <code>Make a copy</code> button is disabled. You also need permission to edit Outbound Shipments.</div>
+
+A confirmation appears — for example _"This will create a copy of Shipment #15 for Kamo Regional Warehouse."_ Click to confirm, and a new shipment is created and opened for you. A notification confirms the new shipment number, for example _"Shipment #28 created as a copy of #15."_
+
+The copy is always created as a brand new shipment with the status `NEW`, so you can review and change it before processing it. The following is carried over from the original shipment:
+
+- the **customer**, and the customer reference
+- the **comment** (prefixed so you can see where it came from, for example _"Copied from shipment #15 (...)"_)
+- transport details, charges, tax and currency
+- the **lines** — each item and its quantity
+
+The following is **not** carried over, so that the copy behaves like a fresh shipment:
+
+- the status (the copy always starts at `NEW`) and all of the original dates
+- the invoice number (a new one is generated)
+- the `On Hold` setting (the copy is not on hold)
+- any link to a requisition or to the original shipment
+
+<div class="note">The copied lines are <b>not allocated to stock</b>. Each item and the quantity you need are carried over, but you will need to <a href="#allocating-an-outbound-shipment">allocate stock</a> again on the new shipment, just as you would for a new shipment.</div>
+
+<div class="warning">If an item on the original shipment is no longer in your catalogue, it cannot be copied. The shipment is still created, and a notification tells you how many items were skipped, for example <i>"1 item was not copied because it is no longer in the catalogue."</i></div>
+
 ## Creating an Outbound Shipment
 
 1. Go to `Distribution` > `Outbound Shipment`.
@@ -194,7 +225,7 @@ The tax rate (%) for service charges and the item's sell price can also be edite
 
 If your store is issuing in foreign currencies follow [these instructions](https://docs.msupply.org.nz/other_stuff:currencies) in the central server documentation to set it up. You will also need to enable the store preference `Store: Able to issue in foreign currency`. This preference is compatible with Open mSupply `v1.7.0+`.
 
-![Store preference](../../images/store-pref-issue-in-foreign-currencies.png)
+![Store preference](../../../images/store-pref-issue-in-foreign-currencies.png)
 
 The pen icon will become active once the above instructions have been followed and only if the customer is an external customer. Click on this icon and change to a currency that you would like to issue the shipment in. The currency rate can also be edited if you and the customer have agreed on a different rate.
 
@@ -255,7 +286,7 @@ Located on the bottom left corner, on the left of the status sequence.
 
 Checking the `Hold` checkbox prevents the Outbound Shipment from being updated to the next status.
 
-![Outbound checkbox](../../images/holdcheckbox.png)
+![Outbound checkbox](../../../images/holdcheckbox.png)
 
 ### Cancel and Confirm button
 
@@ -303,9 +334,9 @@ In the `Add Item` window, you can look up an item by:
 
 Once your item is highlighted, tap on the name or press `Enter`.
 
-![Add Item list](../../images/adding-an-item-all.png)
-![Add Item by name](../../images/adding-an-item-name.png)
-![Add Item by code](../../images/adding-an-item-code.png)
+![Add Item list](../../../images/adding-an-item-all.png)
+![Add Item by name](../../../images/adding-an-item-name.png)
+![Add Item by code](../../../images/adding-an-item-code.png)
 
 Once the item is selected, you can see the following information:
 
@@ -500,10 +531,10 @@ Tap on the `Add from master list` button (top right corner).
 A new `Master Lists` window opens. This allows you to select the required master list. Simply click on one of the lists (if you have some available).
 Note that the lists shown are those which are visible to the customer of the shipment.
 
-![Add Item button](../../images/add-item-master-lists.png)
+![Add Item button](../../../images/add-item-master-lists.png)
 
 Click `OK` on the prompt:
-![Add Item button](../../images/add-item-master-list-prompt.png)
+![Add Item button](../../../images/add-item-master-list-prompt.png)
 
 You will then have unallocated (placeholder) lines added to your shipment, which will then look like this:
 
@@ -668,7 +699,7 @@ When you are happy with the quantities and reasons, you can press on:
 When viewing a specific shipment, you can view the batches on that shipment grouped by item or with each batch listed separately.
 To change the view mode, click the `Group by item` switch.
 
-![Group by Item button](../../images/table_group_by_item_button.png)
+![Group by Item button](../../../images/table_group_by_item_button.png)
 
 When grouped by item, you can expand the item to see individual batches, or use the expand in the table header to expand all grouped rows. If you click on an item you will also see all selected batches, as shown in this example:
 
@@ -682,46 +713,4 @@ If you do not have enough room on your screen, or simply aren't interested in so
 
 Click on the `Show / hide columns` button which is at the top right of the table. This gives a list of the columns available - you can check the columns you want to see. The options chosen are stored for the current browser, so next time you view an Outbound Shipment, you will see the selected columns only.
 
-![Hide column button](../../images/table_filter_button.png)
-
-### View or Edit the Requisition Information Panel
-
-The information Panel allows you to see or edit information about the
-outbound shipment. It is divided into five sections:
-
-- Additional Info
-- Related documents
-- Invoice Details
-- Transport Details
-- Actions
-
-#### Additional Info
-
-In the **Additional Info** section you can:
-
-- See who created the Outbound shipment (name of the user)
-- See when the Outbound shipment was created
-- View and edit the Outbound shipment colour. To edit the colour, tap on the coloured
-  circle and select a colour from the pop-up
-- Write or edit a comment
-
-#### Related Documents
-
-In the **Related Documents** section you can see other related transactions for
-the Outbound shipment.
-
-If you the shipment was created from a Requisition you will see the Requisition number and a link to view the Requisition.
-
-#### Invoice Details
-
-This section lists the service changes, sell price, total price and foreign currency if applicable.
-
-#### Transport Details
-
-The **Transport Details** section is where you can enter the expected delivery date and a reference for the delivery.
-
-#### Actions
-
-- You can tap on the **Copy to Clipboard** button to copy
-  the Requisition details to the clipboard.
-- You can **Delete** the Outbound shipment if it is not in the `Verified` status.
+![Hide column button](../../../images/table_filter_button.png)
